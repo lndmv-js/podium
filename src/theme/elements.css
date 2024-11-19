@@ -1,0 +1,93 @@
+/* purchases */
+.purchases__item {
+	border: 1px solid #E1E1E1;
+	padding: 15px 18px;
+	border-radius: 100px;
+	display: flex;
+	gap: 30px;
+	justify-content: space-between;
+	margin-top: 12px;
+}
+
+.purchases__item:first-child {
+	margin-top: 0;
+}
+
+.purchases__item-content {
+	flex: 1;
+}
+
+.purchases__item-grade {
+	width: 60px;
+}
+
+.purchases__item-date {
+	font-size: 12px;
+	line-height: 15px;
+	color: #848484;
+	margin-bottom: 5px;
+}
+
+.purchases__item-title {
+	font-size: 12px;
+	line-height: 13px;
+}
+
+.purchases__item-grade-value {
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.purchases__item-grade-title {
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 13px;
+	text-align: center;
+	color: #848484;
+}
+/* purchases */
+
+
+
+/* notifications */
+.notifications__item {
+	border: 1px solid #E1E1E1;
+	padding: 18px;
+	border-radius: 33px;
+	margin-top: 12px;
+	position: relative;
+}
+.notifications__item:first-child {
+	margin-top: 0;
+}
+
+.notifications__item-date {
+	font-size: 12px;
+	line-height: 15px;
+	color: #848484;
+	margin-bottom: 12px;
+}
+
+.notifications__item-title {
+	font-size: 16px;
+	line-height: 20px;
+	text-wrap: balance;
+}
+.notifications__item-title b {
+	font-weight: 500;
+}
+.notifications__item-close {
+	background: url('img/notifications-close.svg') no-repeat;
+	background-size: contain;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 18px;
+	right: 18px;
+	transition: .3s ease-out;
+}
+.notifications__item-close:hover {
+	opacity: .8;
+}
+/* notifications */

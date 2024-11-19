@@ -1,0 +1,109 @@
+@font-face {
+	font-family: 'TT Travels Next'; /* Уникальное название шрифта */
+	src: url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.eot'); /* Для IE9 */
+	src: url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.eot?#iefix') format('embedded-opentype'), /* Для IE6-IE8 */
+			 url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.woff2') format('woff2'), /* Современные браузеры */
+			 url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.woff') format('woff'), /* Современные браузеры */
+			 url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.ttf') format('truetype'); /* Старые браузеры */
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue'; /* Уникальное название шрифта */
+	src: url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.eot'); /* Для IE9 */
+	src: url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'), /* Для IE6-IE8 */
+			 url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.woff') format('woff'), /* Современные браузеры */
+			 url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.ttf') format('truetype'); /* Старые браузеры */
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue'; /* Уникальное название шрифта */
+	src: url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.eot'); /* Для IE9 */
+	src: url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'), /* Для IE6-IE8 */
+			 url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.woff') format('woff'), /* Современные браузеры */
+			 url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.ttf') format('truetype'); /* Старые браузеры */
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue'; /* Уникальное название шрифта */
+	src: url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.eot'); /* Для IE9 */
+	src: url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'), /* Для IE6-IE8 */
+			 url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.woff') format('woff'), /* Современные браузеры */
+			 url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.ttf') format('truetype'); /* Старые браузеры */
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+html {
+  --ion-font-family: 'Helvetica Neue';
+	font-weight: 300;
+}
+
+ion-header {
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+ion-title {
+	font-family: 'TT Travels Next', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+ion-toolbar {
+	--padding-top: 18px;
+	--padding-bottom: 18px;
+	--min-height: 72px;
+	--border-width: 0px !important;
+}
+
+ion-menu {
+	--background: var(--ion-color-primary);
+	border: none;
+  outline: none;
+	--height: auto;
+}
+
+ion-menu::part(container) {
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	top: 54px;
+	bottom: 54px;
+}
+
+ion-menu::part(backdrop) {
+	background: #483A2D;
+	opacity: 0.5;
+}
+
+ion-content.ion-content-menu {
+	--background: var(--ion-color-primary);
+}
+
+.close-menu-btn {
+	background: url('img/close-menu.svg') no-repeat;
+	background-size: contain;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 22px;
+	top: 22px;
+}
+
+.menu-btn {
+	--color: #fff;
+}
+
+.menu-btn {
+	background: url(img/userpic.svg) no-repeat;
+	width: 36px;
+	height: 36px;
+}
