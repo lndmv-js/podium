@@ -25,7 +25,6 @@ export default {
 	methods: {
 		removeNotification(id) {
 			this.$store.dispatch('removeNotificationAction', id);
-			// this.notifications = this.notifications.filter(item => item.id !== id);
 		}
 	}
 }
