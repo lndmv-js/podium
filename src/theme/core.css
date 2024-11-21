@@ -1,53 +1,75 @@
 @font-face {
-	font-family: 'TT Travels Next'; /* Уникальное название шрифта */
-	src: url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.eot'); /* Для IE9 */
-	src: url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.eot?#iefix') format('embedded-opentype'), /* Для IE6-IE8 */
-			 url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.woff2') format('woff2'), /* Современные браузеры */
-			 url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.woff') format('woff'), /* Современные браузеры */
-			 url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.ttf') format('truetype'); /* Старые браузеры */
+	font-family: 'TT Travels Next';
+	/* Уникальное название шрифта */
+	src: url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.eot');
+	/* Для IE9 */
+	src: url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.eot?#iefix') format('embedded-opentype'),
+		/* Для IE6-IE8 */
+		url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.woff2') format('woff2'),
+		/* Современные браузеры */
+		url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.woff') format('woff'),
+		/* Современные браузеры */
+		url('fonts/TT-Travels-Next-DemiBold/TT-Travels-Next-DemiBold.ttf') format('truetype');
+	/* Старые браузеры */
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Helvetica Neue'; /* Уникальное название шрифта */
-	src: url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.eot'); /* Для IE9 */
-	src: url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'), /* Для IE6-IE8 */
-			 url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.woff') format('woff'), /* Современные браузеры */
-			 url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.ttf') format('truetype'); /* Старые браузеры */
+	font-family: 'Helvetica Neue';
+	/* Уникальное название шрифта */
+	src: url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.eot');
+	/* Для IE9 */
+	src: url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
+		/* Для IE6-IE8 */
+		url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.woff') format('woff'),
+		/* Современные браузеры */
+		url('fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.ttf') format('truetype');
+	/* Старые браузеры */
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Helvetica Neue'; /* Уникальное название шрифта */
-	src: url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.eot'); /* Для IE9 */
-	src: url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'), /* Для IE6-IE8 */
-			 url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.woff') format('woff'), /* Современные браузеры */
-			 url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.ttf') format('truetype'); /* Старые браузеры */
+	font-family: 'Helvetica Neue';
+	/* Уникальное название шрифта */
+	src: url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.eot');
+	/* Для IE9 */
+	src: url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+		/* Для IE6-IE8 */
+		url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.woff') format('woff'),
+		/* Современные браузеры */
+		url('fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.ttf') format('truetype');
+	/* Старые браузеры */
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Helvetica Neue'; /* Уникальное название шрифта */
-	src: url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.eot'); /* Для IE9 */
-	src: url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'), /* Для IE6-IE8 */
-			 url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.woff') format('woff'), /* Современные браузеры */
-			 url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.ttf') format('truetype'); /* Старые браузеры */
+	font-family: 'Helvetica Neue';
+	/* Уникальное название шрифта */
+	src: url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.eot');
+	/* Для IE9 */
+	src: url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+		/* Для IE6-IE8 */
+		url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.woff') format('woff'),
+		/* Современные браузеры */
+		url('fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.ttf') format('truetype');
+	/* Старые браузеры */
 	font-weight: 500;
 	font-style: normal;
 }
 
 
 html {
-  --ion-font-family: 'Helvetica Neue';
+	--ion-font-family: 'Helvetica Neue';
 	font-weight: 300;
 }
 
 ion-header {
 	padding-left: 18px;
 	padding-right: 18px;
+	box-shadow: none !important;
 }
 
 ion-title {
@@ -68,7 +90,7 @@ ion-toolbar {
 ion-menu {
 	--background: var(--ion-color-primary);
 	border: none;
-  outline: none;
+	outline: none;
 	--height: auto;
 }
 
@@ -106,4 +128,21 @@ ion-content.ion-content-menu {
 	background: url(img/userpic.svg) no-repeat;
 	width: 36px;
 	height: 36px;
+}
+
+ion-tab-bar {
+	--background: var(--ion-color-primary);
+	--border: none;
+	height: 66px;
+	max-width: 282px;
+	margin-top: 14px;
+	margin-bottom: 28px;
+	margin-left: calc((100% - 282px) / 2);
+	margin-right: calc((100% - 282px) / 2);
+	border-radius: 48px;
+}
+
+ion-tab-button {
+	width: 54px;
+	height: 54px;
 }
