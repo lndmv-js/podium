@@ -1,15 +1,20 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 
-import TabsLayout from '@/components/base/TabsLayout.vue'
+import Auth from '@/views/Auth.vue'
+// import TabsLayout from '@/components/base/TabsLayout.vue'
 
 const routes = [
   {
     path: '/',
+    component: Auth
+  },
+  {
+    path: '/tabs/',
     redirect: '/tabs/bonuscards',
   },
   {
     path: '/tabs/',
-    component: TabsLayout,
+    component: () => import('@/components/base/TabsLayout.vue'),
     children: [
       {
         path: '',

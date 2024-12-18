@@ -11,7 +11,7 @@
           spellcheck="false"
           placeholder="Введите тему"
           class="form-control__input"
-		  v-model="formData.subject"
+          v-model="formData.subject"
         />
       </div>
       <div class="form-control">
@@ -24,7 +24,7 @@
           spellcheck="false"
           placeholder="Выберите из списка"
           class="form-control__input"
-		  v-model="formData.type"
+          v-model="formData.type"
         />
       </div>
 
@@ -38,10 +38,13 @@
           spellcheck="false"
           placeholder="Опишите Вашу проблему или вопрос"
           class="form-control__textarea"
-		  v-model="formData.message"
+          :class="{'form-control__textarea--active': formData.message !== ''}"
+          v-model="formData.message"
         />
       </div>
-	  <button class="btn btn--outline" :disabled="isButtonDisabled">Отправить</button>
+      <button class="btn btn--outline" :disabled="isButtonDisabled">
+        Отправить
+      </button>
     </form>
   </base-layout>
 </template>
@@ -51,33 +54,35 @@ export default {
   data() {
     return {
       title: "поддержка",
-	  formData: {
-        subject: '',
-        type: '',
-        message: '',
-      },
+      formData: {
+        subject: "",
+        type: "",
+        message: "",
+      }
     };
   },
   computed: {
     isButtonDisabled() {
-      return !this.formData.subject || !this.formData.type || !this.formData.message;
-    },
+      return (
+        !this.formData.subject || !this.formData.type || !this.formData.message
+      );
+    }
   },
   methods: {
     submitForm() {
       const formArray = [
-		this.formData.subject, 
-		this.formData.type,
-		this.formData.message
-	];
-      console.log('Данные формы:', formArray);
-	  this.cleanForm();
+        this.formData.subject,
+        this.formData.type,
+        this.formData.message,
+      ];
+      console.log("Данные формы:", formArray);
+      this.cleanForm();
     },
-	cleanForm() {
-		this.formData.subject = '';
-		this.formData.type = '';
-		this.formData.message = '';
-	}
+    cleanForm() {
+      this.formData.subject = "";
+      this.formData.type = "";
+      this.formData.message = "";
+    },
   },
 };
 </script>
