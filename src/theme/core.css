@@ -146,38 +146,3 @@ ion-tab-button {
 	width: 54px;
 	height: 54px;
 }
-
-.vue-tel-input {
-	position: relative;
-	box-shadow: none !important;
-}
-
-.vue-tel-input:focus-within {
-	border-color: var(--ion-color-primary);
-}
-
-.vti__dropdown.open, .vti__dropdown:hover {
-	background-color: transparent;
-}
-
-.vti__dropdown {
-	position: static;
-}
-
-.vti__dropdown-list {
-	left: 0px;
-	width: 100%;
-	border-radius: 12px;
-	padding: 6px 0;
-}
-
-.vti__dropdown-list.below {
-	top: 114%;
-}
-
-.vti__dropdown-item {
-	padding: 12px 13px;
-}
-.vti__input {
-	padding-top: 4px;
-}

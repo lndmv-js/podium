@@ -1,9 +1,7 @@
 import { createApp } from 'vue'
 
 import App from './App.vue'
-// import VueTheMask from 'vue-the-mask';
-
-import VueTelInput from 'vue-tel-input';
+import VueTheMask from 'vue-the-mask';
 
 import AuthLayout from './components/base/AuthLayout.vue'
 import BaseLayout from './components/base/BaseLayout.vue'
@@ -17,7 +15,6 @@ import { IonicVue } from '@ionic/vue';
 import '@ionic/vue/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-import 'vue-tel-input/vue-tel-input.css';
 import '@ionic/vue/css/normalize.css';
 import '@ionic/vue/css/structure.css';
 import '@ionic/vue/css/typography.css';
@@ -50,7 +47,7 @@ const app = createApp(App)
   .use(IonicVue)
   .use(router)
   .use(store)
-  .use(VueTelInput);
+  .use(VueTheMask);
 
 app.component('auth-layout', AuthLayout);
 app.component('base-layout', BaseLayout);
