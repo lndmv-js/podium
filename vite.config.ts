@@ -19,5 +19,14 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom'
+  },
+  server: {
+    proxy: {
+      '/get-client-data': {
+        target: 'https://luxuryshopping.uz:222',  // Ваш сервер
+        changeOrigin: true,  // Для правильной обработки заголовков
+        secure: false,       // Если у вас самоподписанный сертификат
+      }
+    }
   }
 })

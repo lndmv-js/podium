@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 
 import App from './App.vue'
+import config from '@/config/config';
 import VueTheMask from 'vue-the-mask';
 
 import AuthLayout from './components/base/AuthLayout.vue'
@@ -48,6 +49,9 @@ const app = createApp(App)
   .use(router)
   .use(store)
   .use(VueTheMask);
+
+// Устанавливаем конфигурацию как глобальное свойство
+app.config.globalProperties.$config = config;
 
 app.component('auth-layout', AuthLayout);
 app.component('base-layout', BaseLayout);

@@ -33,8 +33,14 @@ export default {
 </script>
 
 <style scoped>
+ion-toolbar {
+  --background: #fff;
+  --padding-start: 0px;
+  --padding-end: 0px;
+  --padding-bottom: 0px;
+}
 ion-title {
-  padding: 30px 20px 24px 20px;
+  padding: 30px 0px 24px;
   background: #fff;
 }
 </style>
