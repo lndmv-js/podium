@@ -1,10 +1,12 @@
 <template>
-  <ion-page id="main-content">
+  <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-menu-toggle slot="start">
-          <div class="menu-btn"></div>
-        </ion-menu-toggle>
+        <ion-buttons slot="start">
+          <ion-menu-toggle>
+            <div class="menu-btn"></div>
+          </ion-menu-toggle>
+        </ion-buttons>
         <ion-title>{{ pageTitle }}</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -20,22 +22,25 @@ import {
   IonPage,
   IonHeader,
   IonToolbar,
+  IonButtons,
   IonMenuToggle,
   IonTitle,
   IonContent,
 } from "@ionic/vue";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   props: ["pageTitle"],
   components: {
     IonPage,
     IonHeader,
     IonToolbar,
+    IonButtons,
     IonMenuToggle,
     IonTitle,
     IonContent,
   },
-};
+});
 </script>
 
 <style scoped>

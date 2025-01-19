@@ -23,9 +23,19 @@ export default defineConfig({
   server: {
     proxy: {
       '/get-client-data': {
-        target: 'https://luxuryshopping.uz:222',  // Ваш сервер
+        target: 'https://luxuryshopping.uz:222',  // сервер
         changeOrigin: true,  // Для правильной обработки заголовков
-        secure: false,       // Если у вас самоподписанный сертификат
+        secure: false,       // Если самоподписанный сертификат
+      },
+      '/post-message': {
+        target: 'https://luxuryshopping.uz:222',  // сервер
+        changeOrigin: true,  // Для правильной обработки заголовков
+        secure: false,       // Если самоподписанный сертификат
+      },
+      '/get-client-oper': {
+        target: 'https://luxuryshopping.uz:222',  // сервер
+        changeOrigin: true,  // Для правильной обработки заголовков
+        secure: false,       // Если самоподписанный сертификат
       }
     }
   }

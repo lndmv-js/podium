@@ -10,7 +10,7 @@ const routes = [
   },
   {
     path: '/tabs/',
-    redirect: '/tabs/bonuscards',
+    redirect: '/tabs/bonuscards'
   },
   {
     path: '/tabs/',
@@ -18,30 +18,34 @@ const routes = [
     children: [
       {
         path: '',
-        redirect: 'bonuscards',
+        redirect: 'bonuscards'
       },
       {
         path: 'bonuscards',
         name: 'bonuscards',
-        component: () => import('@/views/BonusCards.vue'),
+        component: () => import('@/views/BonusCards.vue')
       },
       {
         path: 'purchases',
         name: 'purchases',
-        component: () => import('@/views/Purchases.vue'),
+        component: () => import('@/views/Purchases.vue')
       },
       {
         path: 'notifications',
         name: 'notifications',
-        component: () => import('@/views/Notifications.vue'),
+        component: () => import('@/views/Notifications.vue')
       },
       {
         path: 'support',
         name: 'support',
-        component: () => import('@/views/Support.vue'),
+        component: () => import('@/views/Support.vue')
       },
     ],
-  }
+  },
+  {
+    path: '/userpage',
+    component: () => import('@/views/UserPage.vue')
+  },
 ]
 
 const router = createRouter({

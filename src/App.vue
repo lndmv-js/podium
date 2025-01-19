@@ -1,13 +1,7 @@
 <template>
   <ion-app>
-    <!-- <ion-menu content-id="main-content">
-      <ion-content class="ion-content-menu">
-        <ion-menu-toggle>
-          <div class="close-menu-btn"></div>
-        </ion-menu-toggle>
-      </ion-content>
-    </ion-menu> -->
-    <ion-router-outlet />
+    <Menu />
+    <ion-router-outlet id="main-content" />
   </ion-app>
 </template>
 
@@ -19,6 +13,7 @@ import {
   IonMenuToggle,
   IonContent,
 } from "@ionic/vue";
+import Menu from '@/components/main/Menu.vue'
 
 export default {
   components: {
@@ -27,6 +22,7 @@ export default {
     IonMenu,
     IonMenuToggle,
     IonContent,
+    Menu
   },
 };
 </script>

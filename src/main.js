@@ -6,6 +6,7 @@ import VueTheMask from 'vue-the-mask';
 
 import AuthLayout from './components/base/AuthLayout.vue'
 import BaseLayout from './components/base/BaseLayout.vue'
+import SecondLayout from './components/base/SecondLayout.vue'
 
 import router from './router';
 import store from './store';
@@ -45,7 +46,10 @@ import './theme/core.css';
 import './theme/elements.css';
 
 const app = createApp(App)
-  .use(IonicVue)
+  .use(IonicVue, {
+    rippleEffect: false,
+    mode: 'ios',
+  })
   .use(router)
   .use(store)
   .use(VueTheMask);
@@ -55,6 +59,7 @@ app.config.globalProperties.$config = config;
 
 app.component('auth-layout', AuthLayout);
 app.component('base-layout', BaseLayout);
+app.component('second-layout', SecondLayout);
 
 router.isReady().then(() => {
   app.mount('#app');

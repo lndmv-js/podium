@@ -27,6 +27,12 @@
 						<div class="bonus-card__body-title bonus-card__body-title--margin">Кешбек:</div>
 						<div class="bonus-card__body-value">200 денег <span>(до 31.12.2024)</span></div>
 						<div class="bonus-card__body-value">316 денег <span>(до 17.11.2024)</span></div>
+						<div class="bonus-card__body-value">200 денег <span>(до 31.12.2024)</span></div>
+						<div class="bonus-card__body-value">316 денег <span>(до 17.11.2024)</span></div>
+						<div class="bonus-card__body-value">200 денег <span>(до 31.12.2024)</span></div>
+						<div class="bonus-card__body-value">316 денег <span>(до 17.11.2024)</span></div>
+						<div class="bonus-card__body-value">200 денег <span>(до 31.12.2024)</span></div>
+						<div class="bonus-card__body-value">316 денег <span>(до 17.11.2024)</span></div>
 					</div>
 				</div>
 			</div>

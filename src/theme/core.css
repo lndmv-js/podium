@@ -116,9 +116,6 @@ ion-content.ion-content-menu {
 ion-footer {
 	box-shadow: none;
 }
-.footer-md {
-	box-shadow: none;
-}
 
 .close-menu-btn {
 	background: url('img/close-menu.svg') no-repeat;
@@ -128,6 +125,7 @@ ion-footer {
 	position: absolute;
 	right: 22px;
 	top: 22px;
+	z-index: 2;
 }
 
 .menu-btn {

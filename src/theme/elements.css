@@ -48,6 +48,59 @@
 }
 /* btn */
 
+/* Menu */
+.menu-content {
+	padding: 30px 18px;
+}
+
+.menu-content__user {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.menu-content__user-icon {
+	background: url(img/userpic.svg) no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.menu-content__user-title {
+	color: #fff;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.menu-content__container {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding-top: 30px;
+}
+
+.menu-content__link {
+	color: #fff;
+	padding-left: 36px;
+	position: relative;
+	text-decoration: none;
+	font-size: 15px;
+	line-height: 18px;
+}
+
+.menu-content__link::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 3px;
+	background: #fff;
+}
+
+/* End Menu */
+
 /* purchases */
 .purchases__item {
 	border: 1px solid #E1E1E1;
@@ -68,7 +121,7 @@
 }
 
 .purchases__item-grade {
-	width: 60px;
+	width: 86px;
 }
 
 .purchases__item-date {
@@ -239,7 +292,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100%;
+	min-height: 100%;
 }
 
 .bonus-card__header {
@@ -318,3 +371,46 @@
 	margin: 0 auto;
 }
 /* bonus-card */
+
+/* message-success */
+.message-success {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.message-success__title {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 500;
+	text-align: center;
+}
+.message-success__desc {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 300;
+	text-align: center;
+}
+.message-success__icon {
+	text-align: center;
+	margin-top: 30px;
+}
+.message-success__icon img {
+	display: inline-block;
+}
+.message-success__caption {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 300;
+	text-align: center;
+	margin-top: 20px;
+}
+.message-success__caption a {
+	font-weight: 500;
+	display: block;
+	width: fit-content;
+	text-decoration: underline;
+	color: var(--ion-color-dark);
+	margin: 0 auto;
+}
+/* message-success */
