@@ -36,6 +36,21 @@ export default defineConfig({
         target: 'https://luxuryshopping.uz:222',  // сервер
         changeOrigin: true,  // Для правильной обработки заголовков
         secure: false,       // Если самоподписанный сертификат
+      },
+      '/get-shoplist': {
+        target: 'https://luxuryshopping.uz:222',  // сервер
+        changeOrigin: true,  // Для правильной обработки заголовков
+        secure: false,       // Если самоподписанный сертификат
+      },
+      '/get-client-bonus-cards': {
+        target: 'https://luxuryshopping.uz:222',  // сервер
+        changeOrigin: true,  // Для правильной обработки заголовков
+        secure: false,       // Если самоподписанный сертификат
+      },
+      '/get_terms': {
+        target: 'https://luxuryshopping.uz:222',  // сервер
+        changeOrigin: true,  // Для правильной обработки заголовков
+        secure: false,       // Если самоподписанный сертификат
       }
     }
   }

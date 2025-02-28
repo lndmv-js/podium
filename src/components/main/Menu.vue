@@ -5,17 +5,24 @@
         <div class="close-menu-btn"></div>
       </ion-menu-toggle>
       <div class="menu-content">
-        <a href="/userpage" class="menu-content__user">
-          <div class="menu-content__user-icon"></div>
-          <div class="menu-content__user-title">Константин</div>
-        </a>
-
+        <ion-menu-toggle>
+					<div class="menu-content__user" @click="() => router.push('/userpage')">
+						<div class="menu-content__user-icon"></div>
+						<div class="menu-content__user-title">Константин</div>
+					</div>
+        </ion-menu-toggle>
+				
         <div class="menu-content__container">
-          <a href="#" class="menu-content__link">Адреса магазинов</a>
-          <a href="#" class="menu-content__link">Программа лояльности</a>
-          <a href="#" class="menu-content__link">Политика конфиденциальности</a>
+					<ion-menu-toggle>
+          	<div class="menu-content__link" @click="() => router.push('/shoplist')">Адреса магазинов</div>
+					</ion-menu-toggle>
+					<ion-menu-toggle>
+          	<div class="menu-content__link" @click="() => router.push('/program')">Программа лояльности</div>
+					</ion-menu-toggle>
+					<ion-menu-toggle>
+          	<div class="menu-content__link" @click="() => router.push('/politics')">Политика конфиденциальности</div>
+					</ion-menu-toggle>
         </div>
-        
       </div>
     </ion-content>
   </ion-menu>
@@ -25,25 +32,21 @@
 import {
   IonMenu,
   IonContent,
-  IonMenuToggle,
-  IonNavLink,
-  IonButton
+  IonMenuToggle
 } from "@ionic/vue";
 
-import UserPage from '@/views/UserPage.vue';
+import { defineComponent } from "vue";
+import { useRouter } from "vue-router";
 
-export default {
+export default defineComponent({
   components: {
     IonMenu,
     IonContent,
-    IonMenuToggle,
-    IonNavLink,
-    IonButton
+    IonMenuToggle
   },
-  data() {
-    return {
-      component: UserPage,
-    };
-  },
-};
+  setup() {
+    const router = useRouter();
+    return { router };
+  }
+});
 </script>

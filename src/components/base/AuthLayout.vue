@@ -2,7 +2,9 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>{{ pageTitle }}</ion-title>
+        <ion-title>
+					<span class="header-title">{{ pageTitle }}</span>
+				</ion-title>
       </ion-toolbar>
     </ion-header>
     <slot />
@@ -14,9 +16,7 @@ import {
   IonPage,
   IonHeader,
   IonToolbar,
-  IonTitle,
-  IonContent,
-  IonFooter,
+  IonTitle
 } from "@ionic/vue";
 
 export default {
@@ -25,22 +25,7 @@ export default {
     IonPage,
     IonHeader,
     IonToolbar,
-    IonTitle,
-    IonContent,
-    IonFooter,
+    IonTitle
   },
 };
 </script>
-
-<style scoped>
-ion-toolbar {
-  --background: #fff;
-  --padding-start: 0px;
-  --padding-end: 0px;
-  --padding-bottom: 0px;
-}
-ion-title {
-  padding: 30px 0px 24px;
-  background: #fff;
-}
-</style>

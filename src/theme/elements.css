@@ -1,4 +1,16 @@
-/* btn */
+/* --- Header --- */
+.header-title {
+	font-family: 'TT Travels Next', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 30px;
+	text-transform: uppercase;
+	text-align: center;
+}
+/* --- Header --- */
+
+
+/* --- Buttons --- */
 .btn {
 	outline: none;
 	width: 100%;
@@ -69,6 +81,9 @@
 	color: #fff;
 	font-size: 18px;
 	line-height: 30px;
+	font-weight: 300;
+	position: relative;
+	top: 1px;
 }
 
 .menu-content__container {
@@ -92,7 +107,7 @@
 	display: block;
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: -1px;
 	width: 20px;
 	height: 20px;
 	border-radius: 3px;
@@ -100,6 +115,87 @@
 }
 
 /* End Menu */
+
+
+/* --- startpage --- */
+.startpage {
+	min-height: 100%;
+	position: relative;
+	padding: 0 18px;
+	padding-bottom: 30px;
+}
+
+.startpage__bg {
+	position: absolute;
+	inset: 0;
+}
+
+.startpage__bg img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.startpage__bottom {
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	width: 100%;
+	padding: 0 18px;
+}
+
+.startpage__title {
+	font-family: 'TT Travels Next';
+	font-size: 35px;
+	line-height: 40px;
+	color: #FBFAF7;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 18px;
+}
+
+.startpage__login {
+	height: 50px;
+	width: 100%;
+	background: #FBFAF7;
+	border-radius: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	user-select: none;
+	outline: none;
+	font-size: 16px;
+	line-height: 21px;
+	color: #BEA68A;
+	transition: .3s ease-out;
+	box-shadow: 0px 1px 4px 0px rgba(12,12,13,0.1);
+}
+
+.startpage__buttons {
+	margin-bottom: 18px;
+}
+
+.startpage__login:active {
+	background: #BEA68A;
+	color: #fff;
+}
+
+.startpage__caption {
+	font-size: 10px;
+	line-height: 13px;
+	color: #FBFAF7;
+	text-align: center;
+}
+
+.startpage__caption a {
+	text-decoration: underline;
+	color: #FBFAF7;
+}
+
+/* --- startpage --- */
+
 
 /* purchases */
 .purchases__item {
@@ -225,6 +321,8 @@
 }
 /* bottom-tabs */
 
+
+
 /* form-control */
 .form-control {
 	margin-bottom: 12px;
@@ -284,93 +382,119 @@
 }
 /* form-control */
 
-/* bonus-card */
-.bonus-card {
+
+
+/* card-page */
+.card-page {
 	background: var(--ion-color-dark);
 	border-radius: 30px;
-	padding: 10px 18px 52px;
+	padding: 10px 18px 20px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	min-height: 100%;
+	max-height: 100%;
 }
 
-.bonus-card__header {
+.card-page__header {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+	margin-bottom: 45px;
+}
+
+.card-page__header-top {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.bonus-card__header-logo {
-	height: 23px;
+.card-page__header-logo {
+	width: 100px;
 }
-.bonus-card__header-logo img {
+.card-page__header-logo img {
 	display: block;
 	width: 100%;
 	height: 100%;
 }
 
-.bonus-card__header-count {
+.card-page__header-count {
 	font-size: 15px;
 	line-height: 18px;
 	font-weight: 500;
 	color: #fff;
 }
 
-.bonus-card__body-logo {
-	height: 77px;
-	margin-bottom: 40px;
-}
-
-.bonus-card__body-logo img {
-	display: block;
+.card-page__header-qr {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 180px;
 	margin: 0 auto;
 }
 
-.bonus-card__body-info {
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
+.card-page__header-qr img {
+	display: block;
+	width: 100%;
 }
 
-.bonus-card__body-fh {
+.card-page__body {
+	overflow-y: scroll;
+}
+
+.card-page__body-info {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.card-page__body-fh {
 	display: flex;
 	gap: 12px;
 }
-.bonus-card__body-fv {
+.card-page__body-fv {
 	display: flex;
 	flex-direction: column;
+	gap: 10px;
 }
 
-.bonus-card__body-title {
+.card-page__body-title {
 	color: #BEA68A;
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 300;
 }
-.bonus-card__body-title--margin {
+.card-page__body-title--margin {
 	margin-bottom: 8px;
 }
-.bonus-card__body-value {
+.card-page__body-value {
 	color: #fff;
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 500;
 }
-.bonus-card__body-value span {
+.card-page__body-value-btn {
+	position: relative;
+	top: 3px;
+}
+.card-page__body-value-btn svg{
+	display: inline-block;
+}
+.card-page__body-value span {
 	color: #848484;
 	font-size: 12px;
 	font-weight: 300;
 }
 
-.bonus-card__footer {
+.card-page__footer {
 	text-align: center;
 }
-.bonus-card__footer img {
+.card-page__footer img {
 	display: block;
 	margin: 0 auto;
 }
-/* bonus-card */
+/* card-page */
+
+
 
 /* message-success */
 .message-success {
@@ -414,3 +538,113 @@
 	margin: 0 auto;
 }
 /* message-success */
+
+
+
+/* --- Text Page --- */
+.text-page__title {
+	font-family: 'TT Travels Next';
+	font-size: 13px;
+	line-height: 27px;
+	margin-bottom: 12px;
+	text-transform: uppercase;
+}
+
+.text-page__content p {
+	font-size: 16px;
+	line-height: 21px;
+	margin: 0;
+}
+
+.text-page__content {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+/* --- Text Page --- */
+
+
+
+/* --- ShopList --- */
+.shoplist {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.shoplist__item {
+	border-radius: 20px;
+	border: 1px solid #E1E1E1;
+	padding: 18px;
+}
+
+.shoplist__title {
+	margin-bottom: 6px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.shoplist__adress {
+	text-transform: lowercase;
+	font-size: 12px;
+}
+.shoplist__adress:first-letter {
+	text-transform: uppercase;
+}
+/* --- ShopList --- */
+
+
+/* --- Bonus-card --- */
+.bonus-cards {
+	/* padding-top: 120px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+}
+.swiper {
+	width: 100%;
+	height: 200px;
+}
+.bonus-card {
+	border-radius: 30px;
+	height: 200px;
+	width: 100%;
+	position: relative;
+	padding: 14px 18px;
+}
+
+.bonus-card__logo {
+	position: absolute;
+	left: 16px;
+	top: 18px;
+	width: 100px;
+}
+
+.bonus-card__logo img{
+	/* height: 100%; */
+	width: 100%;
+}
+
+.bonus-card__amount {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: right;
+	position: absolute;
+	right: 18px;
+	top: 14px;
+	color: #fff;
+}
+
+.bonus-card__adress {
+	font-size: 12px;
+	line-height: 15px;
+	position: absolute;
+	bottom: 14px;
+	left: 18px;
+	width: 100%;
+	max-width: 248px;
+	color: #fff;
+}
+/* --- Bonus-card --- */

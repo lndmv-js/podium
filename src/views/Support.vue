@@ -1,5 +1,5 @@
 <template>
-  <base-layout :page-title="title">
+  <tab-layout :page-title="title">
     <div v-if="!isSuccess">
       <form @submit.prevent="submitForm">
         <div class="form-control">
@@ -15,7 +15,7 @@
             v-model="formData.subject"
           />
         </div>
-        <div class="form-control">
+        <!-- <div class="form-control">
           <div class="form-control__label">Тип обращения</div>
           <input
             type="text"
@@ -27,7 +27,7 @@
             class="form-control__input"
             v-model="formData.type"
           />
-        </div>
+        </div> -->
 
         <div class="form-control">
           <div class="form-control__label">Текст обращения</div>
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-  </base-layout>
+  </tab-layout>
 </template>
 
 <script>

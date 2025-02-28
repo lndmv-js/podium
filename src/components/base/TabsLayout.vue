@@ -2,7 +2,7 @@
   <ion-page>
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
-      <ion-tab-bar slot="bottom">
+      <ion-tab-bar>
         <ion-tab-button
           v-for="tab in tabs"
           :key="tab.id"
@@ -20,25 +20,21 @@
 
 <script>
 import {
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  IonLabel,
-  IonIcon,
   IonPage,
+  IonTabs,
   IonRouterOutlet,
+  IonTabBar,
+  IonTabButton
 } from "@ionic/vue";
 
 export default {
   name: "Tabs",
   components: {
-    IonLabel,
-    IonTabs,
-    IonTabBar,
-    IonTabButton,
-    IonIcon,
     IonPage,
+    IonTabs,
     IonRouterOutlet,
+    IonTabBar,
+    IonTabButton
   },
   data() {
     return {

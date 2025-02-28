@@ -5,7 +5,7 @@ import config from '@/config/config';
 import VueTheMask from 'vue-the-mask';
 
 import AuthLayout from './components/base/AuthLayout.vue'
-import BaseLayout from './components/base/BaseLayout.vue'
+import TabLayout from './components/base/TabLayout.vue'
 import SecondLayout from './components/base/SecondLayout.vue'
 
 import router from './router';
@@ -42,7 +42,8 @@ import '@ionic/vue/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import './theme/core.css';
+import './theme/base.css';
+import './theme/ionic.css';
 import './theme/elements.css';
 
 const app = createApp(App)
@@ -58,7 +59,7 @@ const app = createApp(App)
 app.config.globalProperties.$config = config;
 
 app.component('auth-layout', AuthLayout);
-app.component('base-layout', BaseLayout);
+app.component('tab-layout', TabLayout);
 app.component('second-layout', SecondLayout);
 
 router.isReady().then(() => {

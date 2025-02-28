@@ -1,0 +1,82 @@
+ion-toolbar {
+	--padding-start: 18px;
+	--padding-end: 18px;
+	--min-height: 72px;
+	--border-width: 0px !important;
+	--background: #fff;
+}
+
+ion-title {
+	padding-inline-start: 70px;
+	padding-inline-end: 70px;
+	background: transparent;
+}
+
+ion-tab-bar {
+	--background: var(--ion-color-primary);
+	--border: none;
+	height: 66px;
+	max-width: 282px;
+	width: 100%;
+	margin-top: 14px;
+	margin-bottom: 28px;
+	margin-left: calc((100% - 282px) / 2);
+	margin-right: calc((100% - 282px) / 2);
+	border-radius: 48px;
+	position: absolute;
+	bottom: 0;
+}
+
+ion-tab-button {
+	width: 54px;
+	height: 54px;
+}
+
+ion-menu {
+	--background: var(--ion-color-primary);
+	border: none;
+	outline: none;
+	--height: auto;
+}
+
+ion-menu::part(container) {
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	top: 54px;
+	bottom: 54px;
+}
+
+ion-menu::part(backdrop) {
+	background: #483A2D;
+	opacity: 0.5;
+}
+
+ion-content.ion-content-menu {
+	--background: var(--ion-color-primary);
+}
+
+ion-footer {
+	box-shadow: none;
+}
+
+.close-menu-btn {
+	background: url('img/close-menu.svg') no-repeat;
+	background-size: contain;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 22px;
+	top: 22px;
+	z-index: 2;
+}
+
+.menu-btn {
+	--color: #fff;
+}
+
+.menu-btn {
+	background: url(img/userpic.svg) no-repeat;
+	width: 36px;
+	height: 36px;
+}
+

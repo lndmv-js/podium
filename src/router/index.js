@@ -1,12 +1,15 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 
-import Auth from '@/views/Auth.vue'
-// import TabsLayout from '@/components/base/TabsLayout.vue'
+import StartPage from '@/views/StartPage.vue'
 
 const routes = [
-  {
+	{
     path: '/',
-    component: Auth
+    component: StartPage
+  },
+	{
+    path: '/auth',
+    component: () => import('@/views/Auth.vue')
   },
   {
     path: '/tabs/',
@@ -42,10 +45,28 @@ const routes = [
       },
     ],
   },
+	{
+    path: '/cardpage/:id',
+    component: () => import('@/views/CardPage.vue')
+  },
   {
     path: '/userpage',
     component: () => import('@/views/UserPage.vue')
   },
+  {
+    path: '/politics',
+    component: () => import('@/views/TextPage.vue'),
+		props: { name: 'privacy_policy' }
+  },
+  {
+    path: '/program',
+    component: () => import('@/views/TextPage.vue'),
+		props: { name: 'loyalty_program' }
+  },
+	{
+    path: '/shoplist',
+    component: () => import('@/views/ShopList.vue')
+  }
 ]
 
 const router = createRouter({

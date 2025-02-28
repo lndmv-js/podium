@@ -55,7 +55,7 @@ export default {
   },
   data() {
     return {
-      title: "с возвращением!",
+      title: "Добро пожаловать!",
       form: {
         phone: "",
         smsCode: "",
@@ -76,7 +76,8 @@ export default {
     async getClientData() {
       const url = "/get-client-data";
       const body = {
-        phone: "+998977727778",
+        // phone: this.form.phone.replace(/\s/g, "")
+        phone: '+998507729309'
       };
 
       try {
@@ -86,6 +87,7 @@ export default {
             password: this.$config.password,
           },
         });
+        console.log(response)
         this.clientData = response.data[0]; // Сохраняем данные в состояние
         this.sendSMS();
       } catch (error) {

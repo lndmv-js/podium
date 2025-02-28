@@ -1,6 +1,6 @@
 <template>
-  <base-layout :page-title="title">
-    <div class="purchases__item" v-for="(item, index) in clientData" :key="index">
+  <tab-layout :page-title="title">
+    <div class="purchases__item" v-for="(item, index) in purchases" :key="index">
       <div class="purchases__item-content">
         <div class="purchases__item-date">{{ item.date }}</div>
         <div class="purchases__item-title">{{getOperationTitle(item.opertype)}}</div>
@@ -10,7 +10,7 @@
         <div class="purchases__item-grade-title">баллов</div>
       </div>
     </div>
-  </base-layout>
+  </tab-layout>
 </template>
 
 <script>
@@ -21,8 +21,13 @@ export default {
   data() {
     return {
       title: "ваши покупки",
-      clientData: null,
+			loading: true
     };
+  },
+	computed: {
+		purchases() {
+      return this.$store.getters.purchases;
+    }
   },
   methods: {
     getOperationTitle(opertype) {
@@ -36,25 +41,14 @@ export default {
       return titles[opertype] || "Неизвестная операция";
     },
   },
-  async mounted() {
-    const url = "/get-client-oper";
-    const body = {
-      phone: "+998901879309",
-    };
-
-    try {
-      const response = await axios.post(url, body, {
-        auth: {
-          username: this.$config.username,
-          password: this.$config.password,
-        },
-      });
-      this.clientData = response.data; // Сохраняем данные в состояние
-      console.log(this.clientData)
-    } catch (error) {
-      this.phoneError = "Ошибка при получении данных клиента";
-      console.log(error);
-    }
-  },
+  mounted() {
+		this.$store.dispatch('fetchPurchases', {
+			username: this.$config.username,
+			password: this.$config.password,
+			phone: this.$config.phone
+		}).then(() => {
+			this.loading = false;
+		});
+	}
 };
 </script>

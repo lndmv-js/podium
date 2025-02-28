@@ -3,7 +3,11 @@
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
-          <button @click="goBack">Назад</button>
+          <div @click="goBack">
+						<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21.24 11.1304L2.865 11.1304L10.74 19.0054L9.75 20.1304L-4.26186e-07 10.3804L9.75 0.630371L10.74 1.75537L2.865 9.63037L21.24 9.63037L21.24 11.1304Z" fill="#BEA68A"/>
+						</svg>
+					</div>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
@@ -43,12 +47,11 @@ export default {
 <style scoped>
 ion-toolbar {
   --background: #fff;
-  --padding-start: 0px;
-  --padding-end: 0px;
-  --padding-bottom: 0px;
 }
-ion-title {
-  padding: 30px 0px 24px;
-  background: #fff;
+ion-content {
+	--padding-top: 30px; 
+	--padding-bottom: 30px; 
+  --padding-start: 18px;
+  --padding-end: 18px;
 }
 </style>
