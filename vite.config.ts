@@ -21,6 +21,8 @@ export default defineConfig({
     environment: 'jsdom'
   },
   server: {
+    host: '0.0.0.0', // Разрешает доступ извне контейнера
+    port: 8100, // Оставляем порт 8100
     proxy: {
       '/get-client-data': {
         target: 'https://luxuryshopping.uz:222',  // сервер
