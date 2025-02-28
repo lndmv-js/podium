@@ -15,4 +15,4 @@ RUN npm ci
 COPY . .
 
 # Запускаем приложение
-CMD ["ionic", "serve", "--no-open"]
+CMD ["ionic", "serve", "--host=0.0.0.0", "--port=8000", "--no-open"]
