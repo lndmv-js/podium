@@ -124,7 +124,7 @@ export default {
 						this.slider.update();
 					}
 				});
-			}, 50);
+			}, 150);
 		});
 	}
 };

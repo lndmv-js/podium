@@ -86,7 +86,7 @@ export default {
   computed: {
     isButtonDisabled() {
       return (
-        !this.formData.subject || !this.formData.type || !this.formData.message
+        !this.formData.subject || !this.formData.message
       );
     }
   },
@@ -100,7 +100,6 @@ export default {
         time: now.toLocaleTimeString('ru-RU'),
         phone: "998901889900",
         subject: this.formData.subject,
-        message_type: this.formData.type,
         message: this.formData.message,
         shop: 3
       };
@@ -120,7 +119,6 @@ export default {
     },
     cleanForm() {
       this.formData.subject = "";
-      this.formData.type = "";
       this.formData.message = "";
     },
   },
