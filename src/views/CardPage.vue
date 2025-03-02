@@ -94,16 +94,11 @@
 					<div class="modal-content">
 						<div class="modal-text">
 							Данный депозит может быть использован в магазинах: 
-							<b
-								v-for="item in shops"
-								:key="item.id"
-							>
-								<span
-									href="#"
-									@click="modalLink(item.shop_id)"
-								>
+							<b v-for="(item, index) in shops" :key="item.id">
+								<span @click="modalLink(item.shop_id)">
 									{{ item.shop_name }}
-								</span>, 
+								</span>
+								<template v-if="index !== shops.length - 1">, </template>
 							</b>
 						</div>
 						<div class="modal-text">

@@ -8,7 +8,7 @@
         <ion-menu-toggle>
 					<div class="menu-content__user" @click="() => router.push('/userpage')">
 						<div class="menu-content__user-icon"></div>
-						<div class="menu-content__user-title">Константин</div>
+						<div class="menu-content__user-title">{{ clientdata ? clientdata.firstname : '...' }}</div>
 					</div>
         </ion-menu-toggle>
 				
@@ -44,9 +44,21 @@ export default defineComponent({
     IonContent,
     IonMenuToggle
   },
+  computed: {
+    clientdata() {
+      return this.$store.getters.clientdata[0];
+    }
+  },
   setup() {
     const router = useRouter();
     return { router };
-  }
+  },
+  mounted() {
+		this.$store.dispatch('fetchClientData', {
+			username: this.$config.username,
+			password: this.$config.password,
+			phone: this.$config.phone
+		})
+	}
 });
 </script>
