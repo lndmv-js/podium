@@ -26,7 +26,7 @@
 					</div>
 
 					<div class="card-page__header-qr">
-						<qrcode-vue v-if="qrCode" :value="qrCode" :size="140" level="H" />
+						<qrcode-vue v-if="qrCode" value="+998901879309gdHqBtIqcv4VKJjy" :size="140" level="H" />
 					</div>
 				</div>
 				<div class="card-page__body">

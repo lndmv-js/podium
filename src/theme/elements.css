@@ -380,6 +380,13 @@
 	font-weight: 400;
 	margin-top: 12px;
 }
+
+.form-control__error {
+	color: #848484;
+	font-size: 13px;
+	font-weight: 400;
+	margin-top: 6px;
+}
 /* form-control */
 
 

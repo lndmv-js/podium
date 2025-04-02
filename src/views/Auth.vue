@@ -15,7 +15,7 @@
           v-mask="'+998 ## ### ####'"
         />
       </div>
-      <div class="form-control__error--large" v-if="phoneError">
+      <div class="form-control__error" v-if="phoneError">
         {{ phoneError }}
       </div>
 
@@ -27,6 +27,7 @@
           autocomplete="off"
           autocorrect="off"
           spellcheck="false"
+          maxlength="4"
           class="form-control__input"
           v-model="form.smsCode"
         />
@@ -35,8 +36,8 @@
     </ion-content>
     <ion-footer>
       <ion-toolbar>
-        <!-- <button class="btn btn--primary" :disabled="isButtonDisabled" @click="getClientData">Войти</button> -->
-        <button class="btn btn--primary" @click="getClientData">Войти</button>
+        <button class="btn btn--primary" v-if="!showSMS" :disabled="isButtonDisabled" @click="getClientData">Отправить код</button>
+        <button class="btn btn--primary" v-if="showSMS" :disabled="isButtonDisabled" @click="login">Войти</button>
       </ion-toolbar>
     </ion-footer>
   </auth-layout>
@@ -47,61 +48,66 @@ import { IonPage, IonToolbar, IonContent, IonFooter } from "@ionic/vue";
 import axios from "axios";
 
 export default {
-  components: {
-    IonPage,
-    IonToolbar,
-    IonContent,
-    IonFooter,
-  },
+  components: { IonPage, IonToolbar, IonContent, IonFooter },
   data() {
     return {
       title: "Добро пожаловать!",
-      form: {
-        phone: "",
-        smsCode: "",
-      },
+      form: { phone: "", smsCode: "" },
       clientData: null,
       phoneError: null,
       showSMS: false,
       smsError: null,
+      smsCode: null,
     };
   },
   computed: {
     isButtonDisabled() {
-      const regex = /^\+998 \d{2} \d{3} \d{4}$/; // Регулярка для +998 ## ### ####
-      return !regex.test(this.form.phone); // Если номер не валиден, кнопка будет отключена
+      return !this.isPhoneValid || (this.showSMS && !this.isSMSValid);
+    },
+    isPhoneValid() {
+      return /^\+998 \d{2} \d{3} \d{4}$/.test(this.form.phone);
+    },
+    isSMSValid() {
+      return /^\d{4}$/.test(this.form.smsCode);
     },
   },
   methods: {
+    generateRandomNumber() {
+      this.smsCode = Math.floor(1000 + Math.random() * 9000);
+    },
     async getClientData() {
-      const url = "/get-client-data";
-      const body = {
-        // phone: this.form.phone.replace(/\s/g, "")
-        phone: '+998507729309'
-      };
-
+      this.phoneError = null;
       try {
-        const response = await axios.post(url, body, {
-          auth: {
-            username: this.$config.username,
-            password: this.$config.password,
-          },
+        const { data } = await axios.post("/get-client-data", { 
+          phone: this.form.phone.replace(/\s/g, "") 
+        }, {
+          auth: { username: this.$config.username, password: this.$config.password }
         });
-        console.log(response)
-        this.clientData = response.data[0]; // Сохраняем данные в состояние
+        
+        this.clientData = data[0];
         this.sendSMS();
-      } catch (error) {
+      } catch {
         this.phoneError = "Ошибка при получении данных клиента";
-        console.log(error);
       }
     },
     sendSMS() {
-      if (this.clientData.phone) {
+      if (this.clientData?.phone) {
+        this.generateRandomNumber();
         this.showSMS = true;
+        this.smsError = `Мы выслали вам 4-х значный код (${this.smsCode})`;
       } else {
         this.phoneError = "Мы не нашли пользователя с таким номером телефона.";
       }
     },
+    login() {
+      this.smsError = '';
+      if(this.form.smsCode == this.smsCode) {
+        console.log('login');
+        this.$router.push("/tabs");
+      } else {
+        this.smsError = `Неверный код (${this.smsCode})`;
+      }
+    }
   },
 };
 </script>

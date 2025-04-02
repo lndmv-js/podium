@@ -29,6 +29,20 @@
 		</div>
 
     <div class="form-control">
+			<div class="form-control__label">Отчество</div>
+			<input
+				type="text"
+				autocapitalize="off"
+				autocomplete="off"
+				autocorrect="off"
+				spellcheck="false"
+				class="form-control__input"
+				v-model="clientdata.middlename"
+				readonly
+			/>
+		</div>
+
+    <!-- <div class="form-control">
 			<div class="form-control__label">E-mail</div>
 			<input
 				type="email"
@@ -40,7 +54,7 @@
 				v-model="clientdata.email"
 				readonly
 			/>
-		</div>
+		</div> -->
 
     <div class="form-control">
 			<div class="form-control__label">Телефон</div>
