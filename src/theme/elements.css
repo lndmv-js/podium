@@ -48,6 +48,12 @@
 	color: var(--ion-color-primary);
 	border: 1px solid var(--ion-color-primary);
 }
+.btn--outline.btn--outline-white {
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+	font-weight: 400;
+}
 .btn--outline:active {
 	background-color: #c8a275;
 	border: 1px solid #c8a275;
@@ -62,7 +68,7 @@
 
 /* Menu */
 .menu-content {
-	padding: 30px 18px;
+	/* padding: 30px 18px; */
 }
 
 .menu-content__user {
@@ -350,6 +356,7 @@
 	outline: none;
 	padding: 12px;
 	color: var(--ion-text-color);
+	background: #fff;
 }
 .form-control__input::placeholder {
 	color: #848484;
@@ -366,6 +373,7 @@
 	outline: none;
 	color: var(--ion-text-color);
 	transition: .2s ease-out;
+	background: #fff;
 }
 .form-control__textarea::placeholder {
 	color: #848484;
@@ -462,6 +470,18 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+}
+
+.card-page__body-title-container {
+	display: flex;
+	gap: 3px;
+	align-items: center;
+}
+
+.card-page__body-title-container svg {
+	display: block;
+	position: relative;
+	top: -2px;
 }
 
 .card-page__body-title {
@@ -655,3 +675,11 @@
 	color: #fff;
 }
 /* --- Bonus-card --- */
+
+.menu-content__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 30px 18px;
+	height: 100%;
+}

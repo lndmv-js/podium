@@ -4,25 +4,33 @@
       <ion-menu-toggle>
         <div class="close-menu-btn"></div>
       </ion-menu-toggle>
-      <div class="menu-content">
-        <ion-menu-toggle>
-					<div class="menu-content__user" @click="() => router.push('/userpage')">
-						<div class="menu-content__user-icon"></div>
-						<div class="menu-content__user-title">{{ clientdata ? clientdata.firstname : '...' }}</div>
-					</div>
-        </ion-menu-toggle>
-				
-        <div class="menu-content__container">
-					<ion-menu-toggle>
-          	<div class="menu-content__link" @click="() => router.push('/shoplist')">Адреса магазинов</div>
-					</ion-menu-toggle>
-					<ion-menu-toggle>
-          	<div class="menu-content__link" @click="() => router.push('/program')">Программа лояльности</div>
-					</ion-menu-toggle>
-					<ion-menu-toggle>
-          	<div class="menu-content__link" @click="() => router.push('/politics')">Политика конфиденциальности</div>
-					</ion-menu-toggle>
+      <div class="menu-content__wrapper">
+        <div class="menu-content">
+          <ion-menu-toggle>
+            <div class="menu-content__user" @click="() => router.push('/userpage')">
+              <div class="menu-content__user-icon"></div>
+              <div class="menu-content__user-title">{{ clientdata ? clientdata.firstname : '...' }}</div>
+            </div>
+          </ion-menu-toggle>
+          
+          <div class="menu-content__container">
+            <ion-menu-toggle>
+              <div class="menu-content__link" @click="() => router.push('/shoplist')">Адреса магазинов</div>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+              <div class="menu-content__link" @click="() => router.push('/program')">Программа лояльности</div>
+            </ion-menu-toggle>
+            <ion-menu-toggle>
+              <div class="menu-content__link" @click="() => router.push('/politics')">Политика конфиденциальности</div>
+            </ion-menu-toggle>
+          </div>
+
         </div>
+        <ion-menu-toggle>
+          <button class="btn btn--outline btn--outline-white" @click="() => router.push('/')">
+            Выйти из профиля
+          </button>
+        </ion-menu-toggle>
       </div>
     </ion-content>
   </ion-menu>

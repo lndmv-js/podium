@@ -4,7 +4,22 @@
       <ion-toolbar>
         <ion-buttons slot="start">
           <ion-menu-toggle>
-            <div class="menu-btn"></div>
+            <div class="menu-btn">
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 36 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M29.1538 30.8297C26.1685 33.4273 22.2679 35 18 35C13.7283 35 9.82453 33.4244 6.8382 30.8227C6.85552 30.8034 6.87136 30.7826 6.88548 30.7604C9.23132 26.7106 13.3876 24.2921 17.9952 24.2921C22.6029 24.2921 26.7591 26.7106 29.105 30.7604C29.1192 30.785 29.1355 30.8082 29.1538 30.8297ZM29.8703 30.1695C27.8829 26.8094 24.7332 24.5153 21.0902 23.6824C22.8404 22.967 24.2873 21.6674 25.1838 20.0057C26.0802 18.3439 26.3705 16.4232 26.0051 14.5716C25.6396 12.72 24.6412 11.0525 23.1803 9.85387C21.7194 8.65527 19.8866 8 17.9952 8C16.1038 8 14.2711 8.65527 12.8102 9.85387C11.3493 11.0525 10.3508 12.72 9.98539 14.5716C9.61998 16.4232 9.91028 18.3439 10.8067 20.0057C11.7031 21.6674 13.15 22.967 14.9002 23.6824C11.2642 24.5113 8.11135 26.8066 6.12367 30.1636C2.96248 27.0766 1 22.7675 1 18C1 8.61116 8.61116 1 18 1C27.3888 1 35 8.61116 35 18C35 22.7705 33.035 27.0821 29.8703 30.1695ZM36 18C36 27.9411 27.9411 36 18 36C8.05887 36 0 27.9411 0 18C0 8.05887 8.05887 0 18 0C27.9411 0 36 8.05887 36 18ZM12.006 12.154C11.2145 13.3359 10.792 14.7254 10.792 16.1469C10.7942 18.0523 11.5539 19.8791 12.9042 21.2264C14.2546 22.5737 16.0855 23.3317 17.9952 23.3339C19.4199 23.3339 20.8126 22.9124 21.9971 22.1227C23.1817 21.3329 24.1049 20.2105 24.6501 18.8972C25.1953 17.584 25.338 16.1389 25.06 14.7448C24.7821 13.3506 24.0961 12.07 23.0887 11.0649C22.0813 10.0598 20.7978 9.37531 19.4005 9.098C18.0032 8.82069 16.5549 8.96302 15.2387 9.50698C13.9225 10.0509 12.7975 10.9721 12.006 12.154Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
           </ion-menu-toggle>
         </ion-buttons>
         <ion-title>
@@ -55,7 +70,7 @@ export default {
 } */
 
 ion-header {
-	background: var(--ion-color-primary) !important;
+  background: var(--ion-color-primary) !important;
 }
 
 ion-toolbar {
@@ -78,26 +93,26 @@ ion-content {
   border-top-right-radius: 30px;
 } */
 
- .content-border-radius {
+.content-border-radius {
   display: block;
   width: 100%;
   height: 30px;
   background: var(--ion-color-primary);
-	position: relative;
+  position: relative;
 }
 
 .content-border-radius:after {
-	content: '';
-	display: block;
+  content: "";
+  display: block;
   width: 100%;
   height: 30px;
   background: #fff;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	right: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
 }
 </style>

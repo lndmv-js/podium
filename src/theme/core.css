@@ -118,7 +118,7 @@ ion-footer {
 }
 
 .close-menu-btn {
-	background: url('img/close-menu.svg') no-repeat;
+	/* background: url('img/close-menu.svg') no-repeat; */
 	background-size: contain;
 	width: 16px;
 	height: 16px;
@@ -133,7 +133,7 @@ ion-footer {
 }
 
 .menu-btn {
-	background: url(img/userpic.svg) no-repeat;
+	/* background: url(img/userpic.svg) no-repeat; */
 	width: 36px;
 	height: 36px;
 }

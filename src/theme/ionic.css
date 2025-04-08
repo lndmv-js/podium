@@ -1,8 +1,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --ion-background-color: #ffffff;
-    --ion-text-color: #000000;
+    --ion-background-color: #ffffff !important;
+    --ion-text-color: #000000 !important;
   }
+	ion-content[data-v-dddebb3e] {
+		--background: #fff !important;
+	}
 }
 
 ion-toolbar {
@@ -82,7 +85,7 @@ ion-footer {
 }
 
 .menu-btn {
-	background: url(img/userpic.svg) no-repeat;
+	/* background: url(img/userpic.svg) no-repeat; */
 	width: 36px;
 	height: 36px;
 }

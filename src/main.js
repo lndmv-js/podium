@@ -46,6 +46,8 @@ import './theme/base.css';
 import './theme/ionic.css';
 import './theme/elements.css';
 
+
+
 const app = createApp(App)
   .use(IonicVue, {
     rippleEffect: false,

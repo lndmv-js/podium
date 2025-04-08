@@ -31,6 +31,7 @@ const actions = {
 					}
 				}
 			);
+			console.log(response.headers);
 			commit('SET_BONUSCARDS', response.data);
 		} catch (error) {
 			console.error('Ошибка при загрузке списка магазинов:', error);
