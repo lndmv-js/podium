@@ -19,16 +19,16 @@ const mutations = {
 const actions = {
   async fetchTextpage({ commit }, { username, password }) {
     try {
-			const response = await axios.get('https://luxuryshopping.uz:222/get_terms', {
-				auth: {
-					username,
-					password,
-				},
-			});
-			commit('SET_TEXTPAGE', response.data);
-		} catch (error) {
-			console.error('Ошибка при загрузке списка магазинов:', error);
-		}
+      const response = await axios.get('https://luxuryshopping.uz:222/get_terms', {
+        auth: {
+          username,
+          password,
+        },
+      });
+      commit('SET_TEXTPAGE', response.data);
+    } catch (error) {
+      console.error('Ошибка при загрузке списка магазинов:', error);
+    }
   }
 };
 
