@@ -20,43 +20,43 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom'
   },
-  server: {
-    proxy: {
-      '/get-client-data': {
-        target: 'https://luxuryshopping.uz:222',  // сервер
-        changeOrigin: true,  // Для правильной обработки заголовков
-        secure: false,       // Если самоподписанный сертификат
-      },
-      '/post-message': {
-        target: 'https://luxuryshopping.uz:222',  // сервер
-        changeOrigin: true,  // Для правильной обработки заголовков
-        secure: false,       // Если самоподписанный сертификат
-      },
-      '/get-client-oper': {
-        target: 'https://luxuryshopping.uz:222',  // сервер
-        changeOrigin: true,  // Для правильной обработки заголовков
-        secure: false,       // Если самоподписанный сертификат
-      },
-      '/get-shoplist': {
-        target: 'https://luxuryshopping.uz:222',  // сервер
-        changeOrigin: true,  // Для правильной обработки заголовков
-        secure: false,       // Если самоподписанный сертификат
-      },
-      '/get-client-bonus-cards': {
-        target: 'https://luxuryshopping.uz:222',  // сервер
-        changeOrigin: true,  // Для правильной обработки заголовков
-        secure: false,       // Если самоподписанный сертификат
-      },
-      '/get_terms': {
-        target: 'https://luxuryshopping.uz:222',  // сервер
-        changeOrigin: true,  // Для правильной обработки заголовков
-        secure: false,       // Если самоподписанный сертификат
-      },
-      '/get-qr': {
-        target: 'https://luxuryshopping.uz:222',  // сервер
-        changeOrigin: true,  // Для правильной обработки заголовков
-        secure: false,       // Если самоподписанный сертификат
-      }
-    }
-  }
+  // server: {
+  //   proxy: {
+  //     '/get-client-data': {
+  //       target: 'https://luxuryshopping.uz:222',  // сервер
+  //       changeOrigin: true,  // Для правильной обработки заголовков
+  //       secure: false,       // Если самоподписанный сертификат
+  //     },
+  //     '/post-message': {
+  //       target: 'https://luxuryshopping.uz:222',  // сервер
+  //       changeOrigin: true,  // Для правильной обработки заголовков
+  //       secure: false,       // Если самоподписанный сертификат
+  //     },
+  //     '/get-client-oper': {
+  //       target: 'https://luxuryshopping.uz:222',  // сервер
+  //       changeOrigin: true,  // Для правильной обработки заголовков
+  //       secure: false,       // Если самоподписанный сертификат
+  //     },
+  //     '/get-shoplist': {
+  //       target: 'https://luxuryshopping.uz:222',  // сервер
+  //       changeOrigin: true,  // Для правильной обработки заголовков
+  //       secure: false,       // Если самоподписанный сертификат
+  //     },
+  //     '/get-client-bonus-cards': {
+  //       target: 'https://luxuryshopping.uz:222',  // сервер
+  //       changeOrigin: true,  // Для правильной обработки заголовков
+  //       secure: false,       // Если самоподписанный сертификат
+  //     },
+  //     '/get_terms': {
+  //       target: 'https://luxuryshopping.uz:222',  // сервер
+  //       changeOrigin: true,  // Для правильной обработки заголовков
+  //       secure: false,       // Если самоподписанный сертификат
+  //     },
+  //     '/get-qr': {
+  //       target: 'https://luxuryshopping.uz:222',  // сервер
+  //       changeOrigin: true,  // Для правильной обработки заголовков
+  //       secure: false,       // Если самоподписанный сертификат
+  //     }
+  //   }
+  // }
 })

@@ -340,7 +340,7 @@ export default {
     },
 
     async getQrCode() {
-      const url = "/get-qr";
+      const url = "https://luxuryshopping.uz:222/get-qr";
 
       const body = {
         phone: "+998901879309",

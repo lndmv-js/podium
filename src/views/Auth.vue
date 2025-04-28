@@ -78,7 +78,7 @@ export default {
     async getClientData() {
       this.phoneError = null;
       try {
-        const { data } = await axios.post("/get-client-data", { 
+        const { data } = await axios.post("https://luxuryshopping.uz:222/get-client-data", { 
           phone: this.form.phone.replace(/\s/g, "") 
         }, {
           auth: { username: this.$config.username, password: this.$config.password }

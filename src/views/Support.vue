@@ -92,7 +92,7 @@ export default {
   },
   methods: {
     async submitForm() {
-      const url = "/post-message";
+      const url = "https://luxuryshopping.uz:222/post-message";
       const now = new Date()
 
       const body = {

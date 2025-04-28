@@ -5,7 +5,9 @@ import StartPage from '@/views/StartPage.vue'
 const routes = [
 	{
     path: '/',
-    component: StartPage
+    // component: StartPage
+    redirect: '/program'
+    // component: () => import('@/views/TestApi.vue')
   },
 	{
     path: '/auth',

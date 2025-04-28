@@ -15,13 +15,13 @@
           
           <div class="menu-content__container">
             <ion-menu-toggle>
-              <div class="menu-content__link" @click="() => router.push('/shoplist')">Адреса магазинов</div>
+              <div class="menu-content__link menu-content__link-1" @click="() => router.push('/shoplist')">Адреса магазинов</div>
             </ion-menu-toggle>
             <ion-menu-toggle>
-              <div class="menu-content__link" @click="() => router.push('/program')">Программа лояльности</div>
+              <div class="menu-content__link menu-content__link-2" @click="() => router.push('/program')">Программа лояльности</div>
             </ion-menu-toggle>
             <ion-menu-toggle>
-              <div class="menu-content__link" @click="() => router.push('/politics')">Политика конфиденциальности</div>
+              <div class="menu-content__link menu-content__link-3" @click="() => router.push('/politics')">Политика конфиденциальности</div>
             </ion-menu-toggle>
           </div>
 

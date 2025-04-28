@@ -17,7 +17,7 @@ const mutations = {
 const actions = {
 	async fetchPurchases({ commit }, { username, password, phone }) {
 		try {
-			const response = await axios.post('/get-client-oper',
+			const response = await axios.post('https://luxuryshopping.uz:222/get-client-oper',
 				{ phone },
 				{
 					auth: {

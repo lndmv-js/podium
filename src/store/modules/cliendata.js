@@ -17,7 +17,7 @@ const mutations = {
 const actions = {
 	async fetchClientData({ commit }, { username, password, phone }) {
 		try {
-			const response = await axios.post('/get-client-data',
+			const response = await axios.post('https://luxuryshopping.uz:222/get-client-data',
 				{ phone },
 				{
 					auth: {
@@ -28,7 +28,7 @@ const actions = {
 			);
 			commit('SET_CLIENTDATA', response.data);
 		} catch (error) {
-			console.error('Ошибка при загрузке списка магазинов:', error);
+			console.error('Ошибка при загрузке данных о клиенте:', error);
 		}
 	}
 };

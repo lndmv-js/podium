@@ -22,7 +22,7 @@ const mutations = {
 const actions = {
 	async fetchBonusCards({ commit }, { username, password, phone }) {
 		try {
-			const response = await axios.post('/get-client-bonus-cards',
+			const response = await axios.post('https://luxuryshopping.uz:222/get-client-bonus-cards',
 				{ phone },
 				{
 					auth: {
@@ -39,7 +39,7 @@ const actions = {
 	},
 	async fetchBonusCard({ commit }, { username, password, phone, shop_id }) {
 		try {
-			const response = await axios.post('/get-client-bonus-cards',
+			const response = await axios.post('https://luxuryshopping.uz:222/get-client-bonus-cards',
 				{ phone, shop_id },
 				{
 					auth: {

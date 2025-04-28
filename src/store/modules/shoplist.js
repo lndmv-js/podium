@@ -18,7 +18,7 @@ const mutations = {
 const actions = {
 	async fetchShoplist({ commit }, { username, password }) {
 		try {
-			const response = await axios.get('/get-shoplist', {
+			const response = await axios.get('https://luxuryshopping.uz:222/get-shoplist', {
 				auth: {
 					username,
 					password,
